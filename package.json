@@ -1,0 +1,38 @@
+{
+	"name": "babel-mixin",
+	"description": "Babel mixin for running ES2015+ code in Node.js",
+	"version": "0.0.0",
+	"main": "src/main",
+	"scripts": {
+		"build": "npm i && grunt",
+		"buildw": "npm i & grunt",
+		"buildx": "npm i && grunt && npm start",
+		"buildwx": "npm i & grunt & npm start",
+		"clean": "rm -rf node_modules && rm -f package-lock.json",
+		"cleanw": "rmdir /Q /S node_modules & del package-lock.json",
+		"rebuild": "npm run clean & npm run build",
+		"rebuildw": "npm run cleanw & npm run buildw",
+		"lint": "grunt eslint",
+		"start": "grunt",
+		"test": "grunt"
+	},
+	"unusedScripts": {
+		"mocha": "grunt mochaTest"
+	},
+	"dependencies": {
+		"@babel/core": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
+		"@babel/register": "^7.4.4",
+		"grunt": "^1.0.4",
+		"grunt-eslint": "^21.1.0"
+	},
+	"engineStrict": true,
+	"engines": {
+		"node": ">= 12"
+	},
+	"keywords": [
+		"Babel"
+	],
+	"author": "Tom Weatherhead <null@2hrd4u.org> (https://httpbin.org/status/418)",
+	"license": "MIT"
+}
