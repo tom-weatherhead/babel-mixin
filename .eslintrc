@@ -1,14 +1,7 @@
 {
 	"globals": {
-		"__dirname": true,
-		"alert": true,
-		"console": true,
-		"describe": true,
-		"it": true,
 		"module": true,
-		"Promise": true,
-		"require": true,
-		"setTimeout": true
+		"require": true
 	},
 	"parserOptions": {
 		"ecmaVersion": 2018,

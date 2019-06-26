@@ -9,16 +9,17 @@
 'use strict';
 
 module.exports = (options = {}) => {
+	const config = require('thaw-config');
 	let targets;
 
 	switch (options.profile) {
 		case 'client':
-			targets = require('../config/babel-targets-client-side');
+			targets = config.babel.client;
 			break;
 
 		// case 'server':
 		default:
-			targets = require('../config/babel-targets-server-side');
+			targets = config.babel.server;
 			break;
 	}
 

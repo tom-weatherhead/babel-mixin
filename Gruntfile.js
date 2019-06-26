@@ -1,4 +1,4 @@
-// golden-goose/web-service/Gruntfile.js
+// babel-mixin/Gruntfile.js
 
 'use strict';
 
