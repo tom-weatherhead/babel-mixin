@@ -28,14 +28,31 @@ module.exports = (options = {}) => {
 	}
 
 	// Transpile all code following this line with babel and use 'env' (aka ES6) preset.
+	// TODO 2019-06-27 :
+	// const babelOptions = config.babel.getOptions(targets);
+	// Or:
+	// const babelOptions = config.babel.getOptions({ targetName: foo (or targetOptions: fooOptions), transformClasses: [true | false | undefined] });
+	// Then:
+	// require('@babel/register')(babelOptions);
+	// These babelOptions can then be used in some of our Gruntfiles as options for babel-loader.
+
 	require('@babel/register')({
 		// See https://babeljs.io/docs/en/next/babel-register.html
 		// See https://babeljs.io/docs/en/next/options
 		// See https://babeljs.io/docs/en/next/options#plugin-preset-entries
 		// The configuration below matches the configuration of Babel in the Gruntfile.
-		presets: [[ '@babel/preset-env', {
-			targets: targets
-		}]]
+		presets: [
+			[ '@babel/preset-env', {
+				targets: targets
+			}] /* ,
+			['@babel/plugin-transform-classes', {
+				'loose': true
+				// 'loose': false
+			}] */
+		],
+		// ThAW 2019-06-27 : Include these next two lines, or exclude them?
+		comments: false,
+		sourceType: 'unambiguous'
 	});
 
 	// 2019-06-25 :

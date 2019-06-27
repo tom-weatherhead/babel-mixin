@@ -1,7 +1,7 @@
 {
 	"name": "babel-mixin",
 	"description": "Babel mixin for running ES2015+ code in Node.js",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "src/main",
 	"scripts": {
 		"build": "npm i && grunt",
@@ -23,7 +23,7 @@
 		"@babel/core": "^7.4.5",
 		"@babel/preset-env": "^7.4.5",
 		"@babel/register": "^7.4.4",
-		"thaw-config": "0.0.0"
+		"thaw-config": "file:../thaw-config-0.0.1.tgz"
 	},
 	"devDependencies": {
 		"grunt": "^1.0.4",
