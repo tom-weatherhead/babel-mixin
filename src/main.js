@@ -10,50 +10,15 @@
 
 module.exports = (options = {}) => {
 	const config = require('thaw-config');
-	let targets;
-
-	switch (options.profile) {
-		case 'client':
-			targets = config.babel.client;
-			break;
-
-		// case 'server':
-		default:
-			targets = config.babel.server;
-			break;
-	}
-
-	if (!targets) {
-		throw new Error(`babel-mixin: Unrecognized profile name '${options.profile}'.`);
-	}
-
-	// Transpile all code following this line with babel and use 'env' (aka ES6) preset.
-	// TODO 2019-06-27 :
-	// const babelOptions = config.babel.getOptions(targets);
-	// Or:
-	// const babelOptions = config.babel.getOptions({ targetName: foo (or targetOptions: fooOptions), transformClasses: [true | false | undefined] });
-	// Then:
-	// require('@babel/register')(babelOptions);
-	// These babelOptions can then be used in some of our Gruntfiles as options for babel-loader.
-
-	require('@babel/register')({
-		// See https://babeljs.io/docs/en/next/babel-register.html
-		// See https://babeljs.io/docs/en/next/options
-		// See https://babeljs.io/docs/en/next/options#plugin-preset-entries
-		// The configuration below matches the configuration of Babel in the Gruntfile.
-		presets: [
-			[ '@babel/preset-env', {
-				targets: targets
-			}] /* ,
-			['@babel/plugin-transform-classes', {
-				'loose': true
-				// 'loose': false
-			}] */
-		],
-		// ThAW 2019-06-27 : Include these next two lines, or exclude them?
-		comments: false,
-		sourceType: 'unambiguous'
+	const defaultTargetProfileName = 'server';
+	const babelOptions = config.babel.getOptions({
+		targetOptions: options.targetOptions,
+		targetProfileName: options.targetProfileName || defaultTargetProfileName,
+		transformClasses: options.transformClasses
 	});
+
+	// These babelOptions can then be used in some of our Gruntfiles as options for babel-loader.
+	require('@babel/register')(babelOptions);
 
 	// 2019-06-25 :
 	// npm WARN deprecated @babel/polyfill@7.4.4: 🚨 As of Babel 7.4.0, this
@@ -69,6 +34,12 @@ module.exports = (options = {}) => {
 	// require('@babel/polyfill');
 
 	// ... has been replaced with this:
-	// require('core-js/stable');
-	// require('regenerator-runtime/runtime');
+
+	if (options.includeCoreJS) {
+		require('core-js/stable');
+	}
+
+	if (options.includeRegeneratorRuntime) {
+		require('regenerator-runtime/runtime');
+	}
 };

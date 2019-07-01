@@ -2,6 +2,14 @@
 	"name": "babel-mixin",
 	"description": "Babel mixin for running ES2015+ code in Node.js",
 	"version": "0.0.2",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tom-weatherhead/babel-mixin.git"
+	},
+	"homepage": "https://github.com/tom-weatherhead/babel-mixin#readme",
+	"bugs": {
+		"url": "https://github.com/tom-weatherhead/babel-mixin/issues"
+	},
 	"main": "src/main",
 	"scripts": {
 		"build": "npm i && grunt",
@@ -23,11 +31,16 @@
 		"@babel/core": "^7.4.5",
 		"@babel/preset-env": "^7.4.5",
 		"@babel/register": "^7.4.4",
+		"regenerator-runtime": "^0.13.2",
 		"thaw-config": "file:../thaw-config-0.0.1.tgz"
 	},
 	"devDependencies": {
 		"grunt": "^1.0.4",
 		"grunt-eslint": "^21.1.0"
+	},
+	"engineStrict": true,
+	"engines": {
+		"node": ">= 8"
 	},
 	"keywords": [
 		"Babel"
