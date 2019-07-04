@@ -32,7 +32,7 @@
 		"@babel/preset-env": "^7.4.5",
 		"@babel/register": "^7.4.4",
 		"regenerator-runtime": "^0.13.2",
-		"thaw-config": "file:../thaw-config/thaw-config-0.0.1.tgz"
+		"thaw-config": "file:../thaw-config-0.0.1.tgz"
 	},
 	"devDependencies": {
 		"grunt": "^1.0.4",
