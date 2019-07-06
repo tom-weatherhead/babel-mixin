@@ -1,2 +1,2 @@
 # babel-mixin
-Babel mixin for running ES2015+ code in Node.js
+Babel/Grunt/Webpack mixin for running ES2015+ code in Node.js
