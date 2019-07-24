@@ -1,6 +1,6 @@
 {
 	"name": "babel-mixin",
-	"description": "Babel/Grunt/Webpack mixin for running ES2015+ code in Node.js",
+	"description": "Babel/Grunt/Mocha/Webpack mixin for running ES2015+ code in Node.js",
 	"version": "0.0.3",
 	"repository": {
 		"type": "git",
@@ -32,12 +32,13 @@
 		"babel-loader": "^8.0.6",
 		"grunt": "^1.0.4",
 		"grunt-contrib-concat": "^1.0.1",
-		"grunt-contrib-nodeunit": "^2.0.0",
 		"grunt-eslint": "^22.0.0",
+		"grunt-mocha-test": "^0.13.3",
 		"grunt-webpack": "^3.1.3",
+		"mocha": "^6.2.0",
 		"regenerator-runtime": "^0.13.3",
-		"thaw-config": "^0.0.1",
-		"webpack": "^4.36.1"
+		"thaw-config": "^0.0.2",
+		"webpack": "^4.37.0"
 	},
 	"devDependencies": {},
 	"engineStrict": true,
@@ -47,7 +48,7 @@
 	"keywords": [
 		"Babel",
 		"Grunt",
-		"Nodeunit",
+		"Mocha",
 		"Webpack"
 	],
 	"author": "Tom Weatherhead <null@2hrd4u.org> (https://httpbin.org/status/418)",
