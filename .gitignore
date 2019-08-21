@@ -62,4 +62,5 @@ typings/
 
 # For macOS:
 .DS_Store
-
+._.DS_Store
+.Trashes
