@@ -1,7 +1,7 @@
 {
 	"name": "babel-mixin",
 	"description": "Babel/Grunt/Mocha/Webpack mixin for running ES2015+ code in Node.js",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/tom-weatherhead/babel-mixin.git"
@@ -38,7 +38,7 @@
 		"mocha": "^6.2.0",
 		"regenerator-runtime": "^0.13.3",
 		"thaw-config": "^0.0.4",
-		"uglifyjs-webpack-plugin": "^2.2.0",
+		"uglifyjs-webpack-plugin": "<2",
 		"webpack": "^4.39.2"
 	},
 	"devDependencies": {},
