@@ -1,7 +1,7 @@
 {
 	"name": "babel-mixin",
 	"description": "Babel/Grunt/Mocha/Webpack mixin for running ES2015+ code in Node.js",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/tom-weatherhead/babel-mixin.git"
@@ -29,10 +29,10 @@
 		"test": "grunt"
 	},
 	"dependencies": {
-		"@babel/core": "^7.7.2",
-		"@babel/plugin-transform-classes": "^7.7.0",
-		"@babel/preset-env": "^7.7.1",
-		"@babel/register": "^7.7.0",
+		"@babel/core": "^7.7.4",
+		"@babel/plugin-transform-classes": "^7.7.4",
+		"@babel/preset-env": "^7.7.4",
+		"@babel/register": "^7.7.4",
 		"babel-loader": "^8.0.6",
 		"grunt": "^1.0.4",
 		"grunt-contrib-concat": "^1.0.1",
