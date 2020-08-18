@@ -26,20 +26,20 @@
 		"test": "grunt"
 	},
 	"dependencies": {
-		"@babel/core": "^7.7.4",
-		"@babel/plugin-transform-classes": "^7.7.4",
-		"@babel/preset-env": "^7.7.4",
-		"@babel/register": "^7.7.4",
-		"babel-loader": "^8.0.6",
-		"grunt": "^1.0.4",
+		"@babel/core": "^7.11.1",
+		"@babel/plugin-transform-classes": "^7.10.4",
+		"@babel/preset-env": "^7.11.0",
+		"@babel/register": "^7.10.5",
+		"babel-loader": "^8.1.0",
+		"grunt": "^1.2.1",
 		"grunt-contrib-concat": "^1.0.1",
 		"grunt-eslint": "^22.0.0",
 		"grunt-webpack": "^3.1.3",
 		"jest": "^24.9.0",
-		"regenerator-runtime": "^0.13.3",
-		"thaw-config": "^0.0.4",
-		"uglifyjs-webpack-plugin": "<2",
-		"webpack": "^4.41.2"
+		"regenerator-runtime": "^0.13.7",
+		"thaw-config": "^0.0.5",
+		"uglifyjs-webpack-plugin": "^2.2.0",
+		"webpack": "^4.44.1"
 	},
 	"devDependencies": {},
 	"engines": {
