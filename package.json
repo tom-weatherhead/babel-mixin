@@ -39,7 +39,7 @@
 		"regenerator-runtime": "^0.13.7",
 		"thaw-config": "^0.0.5",
 		"uglifyjs-webpack-plugin": "^2.2.0",
-		"webpack": "^4.44.1"
+		"webpack": "^5.0.0"
 	},
 	"devDependencies": {},
 	"engines": {
